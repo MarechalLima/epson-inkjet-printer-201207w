@@ -23,7 +23,10 @@
         <Name>epson-inkjet-printer-201207w</Name>
         <Icon>printer</Icon>
         <Files>
-            <Path fileType="data">/opt/</Path>
+            <Path fileType="data">/usr/share/ppd</Path>
+            <Path fileType="data">/opt</Path>
+            <Path fileType="data">/usr/lib64</Path>
+            <Path fileType="executable">/usr/lib/cups/filter</Path>
         </Files>
         <RuntimeDependencies>
             <Dependency>cups</Dependency>
