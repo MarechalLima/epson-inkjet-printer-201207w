@@ -17,9 +17,8 @@ def setup():
 
 def install():
 
-    #/usr/share/cups/model/gutenprint/5.2/Global/stp-escp2-l210.5.2.sim.ppd.gz
-    pisitools.insinto("/", "opt")
-    #shelltools.system("rm -rf /usr/share/cups/model/Epson/")
-    #shelltools.system("mv -u opt/epson-inkjet-printer-201207w/ppds/* /usr/share/cups/model/")
-    #shelltools.system("mv -u opt/epson-inkjet-printer-201207w/lib64/* /usr/lib64/")
-    #shelltools.system("mv -u opt/epson-inkjet-printer-201207w/cups/* /usr/share/cups/")
+    pisitools.insinto("/", "opt") 
+    pisitools.dosym("/opt/epson-inkjet-printer-201207w/ppds/Epson", "/usr/share/ppd/Epson")
+    pisitools.dosym("/opt/epson-inkjet-printer-201207w/lib64/libEpson_201207w.so.1.0.0", "/usr/lib64/libEpson_201207w.so.1.0.0")
+    pisitools.dosym("/opt/epson-inkjet-printer-201207w/lib64/libEpson_201207w.MT.so.1.0.0", "/usr/lib64/libEpson_201207w.MT.so.1.0.0")
+    pisitools.dosym("/opt/epson-inkjet-printer-201207w/cups/lib/filter/epson_inkjet_printer_filter", "/usr/lib/cups/filter/epson_inkjet_printer_filter")
